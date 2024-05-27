@@ -5,7 +5,8 @@
     <scene>
       <ambient>0.95 0.95 0.95 1</ambient>
       <background>0.3 0.3 0.3 1</background>
-      <shadows>true</shadows>
+      <!-- was true -->
+      <shadows>false</shadows>
     </scene>
     <include>
       <uri>model://sun</uri>
@@ -36,7 +37,8 @@
           <contact_surface_layer>0.001</contact_surface_layer>
         </constraints>
       </ode>
-      <max_step_size>0.004</max_step_size>
+      <!-- was 0.004 -->
+      <max_step_size>0.01</max_step_size> 
       <real_time_factor>1</real_time_factor>
       <real_time_update_rate>250</real_time_update_rate>
       <magnetic_field>6.0e-6 2.3e-5 -4.2e-5</magnetic_field>

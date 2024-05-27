@@ -23,6 +23,7 @@
             <uri>model://asphalt_plane/materials/textures</uri>
             <name>vrc/asphalt</name>
           </script>
+          Gazebo/GreyTransparent
         </material>
       </visual>
     </link>
