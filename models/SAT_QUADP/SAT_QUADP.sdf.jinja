@@ -1,12 +1,12 @@
 <?xml version="1.0" ?>
 
 <sdf version='1.6'>
-  <model name='TV_QUADX'>
+  <model name='SAT_QUADP'>
     <link name='base_link'>
-      <pose>0 0 0 0 0 0</pose>
+      <pose>0 0 0 0 0 0.785398</pose>
       <inertial>
 	<!-- TO DO: Correct mass and inertias -->
-        <pose>0 0 0 0 0 0</pose>
+        <pose>0 0 0 0 0 0.785398</pose>
         <mass>1.75</mass>
         <inertia>
           <ixx>0.08612</ixx>
@@ -22,7 +22,7 @@
         <geometry>
           <mesh>
             <scale>1e-3 1e-3 1e-3</scale>
-            <uri>model://TV_QUADX/meshes/body.stl</uri>
+            <uri>model://SAT_QUADP/meshes/body.stl</uri>
           </mesh>
         </geometry>
         <surface>
@@ -42,7 +42,7 @@
         <geometry>
           <mesh>
             <scale>1e-3 1e-3 1e-3</scale>
-            <uri>model://TV_QUADX/meshes/body.stl</uri>
+            <uri>model://SAT_QUADP/meshes/body.stl</uri>
           </mesh>
         </geometry>
         <material>
@@ -116,7 +116,8 @@
     -->
 
     <link name='tilt_arm_3'>
-      <pose>0.19 0.19 0.016 0 0 5.49779</pose>
+      <!-- <pose>0.19 0.19 0.016 0 0 5.49779</pose> -->
+      <pose>0.27 0 0.016 0 0 4.71239</pose>
       <inertial>
         <pose>0.0 0.0 0.0 0 0 0</pose>
         <mass>0.04031180930624021</mass>
@@ -133,7 +134,7 @@
         <geometry>
           <mesh>
             <scale>1e-3 1e-3 1e-3</scale>
-            <uri>model://TV_QUADX/meshes/dof1.stl</uri>
+            <uri>model://SAT_QUADP/meshes/dof1.stl</uri>
           </mesh>
         </geometry>
         <surface>
@@ -149,7 +150,7 @@
         <geometry>
           <mesh>
             <scale>1e-3 1e-3 1e-3</scale>
-            <uri>model://TV_QUADX/meshes/dof1.stl</uri>
+            <uri>model://SAT_QUADP/meshes/dof1.stl</uri>
           </mesh>
         </geometry>
         <material>
@@ -169,7 +170,7 @@
       <child>tilt_arm_3</child>
       <parent>base_link</parent>
       <axis>
-        <xyz>0.5 0.5 0</xyz>
+        <xyz>1 0 0</xyz>
         <limit>
           <lower>-0.349066</lower>
           <upper>0.349066</upper>
@@ -184,7 +185,8 @@
     </joint>
 
     <link name='tilt_arm_2'>
-      <pose>-0.19 0.19 0.016 0 0 3.92699</pose>
+      <!-- <pose>-0.19 0.19 0.016 0 0 3.92699</pose> -->
+      <pose>0 0.27 0.016 0 0 3.14159</pose>
       <inertial>
         <pose>0.0 0.0 0.0 0 0 0</pose>
         <mass>0.04031180930624021</mass>
@@ -201,7 +203,7 @@
         <geometry>
           <mesh>
             <scale>1e-3 1e-3 1e-3</scale>
-            <uri>model://TV_QUADX/meshes/dof1.stl</uri>
+            <uri>model://SAT_QUADP/meshes/dof1.stl</uri>
           </mesh>
         </geometry>
         <surface>
@@ -217,7 +219,7 @@
         <geometry>
           <mesh>
             <scale>1e-3 1e-3 1e-3</scale>
-            <uri>model://TV_QUADX/meshes/dof1.stl</uri>
+            <uri>model://SAT_QUADP/meshes/dof1.stl</uri>
           </mesh>
         </geometry>
         <material>
@@ -237,7 +239,7 @@
       <child>tilt_arm_2</child>
       <parent>base_link</parent>
       <axis>
-        <xyz>-0.5 0.5 0</xyz>
+        <xyz>0 1 0</xyz>
         <limit>
           <lower>-0.349066</lower>
           <upper>0.349066</upper>
@@ -252,7 +254,8 @@
     </joint>
 
     <link name='tilt_arm_4'>
-      <pose>-0.19 -0.19 0.016 0 0 2.356190</pose>
+      <!-- <pose>-0.19 -0.19 0.016 0 0 2.356190</pose> -->
+      <pose>-0.27 0 0.016 0 0 1.5708</pose>
       <inertial>
         <pose>0.0 0.0 0.0 0 0 0</pose>
         <mass>0.04031180930624021</mass>
@@ -269,7 +272,7 @@
         <geometry>
           <mesh>
             <scale>1e-3 1e-3 1e-3</scale>
-            <uri>model://TV_QUADX/meshes/dof1.stl</uri>
+            <uri>model://SAT_QUADP/meshes/dof1.stl</uri>
           </mesh>
         </geometry>
         <surface>
@@ -285,7 +288,7 @@
         <geometry>
           <mesh>
             <scale>1e-3 1e-3 1e-3</scale>
-            <uri>model://TV_QUADX/meshes/dof1.stl</uri>
+            <uri>model://SAT_QUADP/meshes/dof1.stl</uri>
           </mesh>
         </geometry>
         <material>
@@ -305,7 +308,7 @@
       <child>tilt_arm_4</child>
       <parent>base_link</parent>
       <axis>
-        <xyz>-0.5 -0.5 0</xyz>
+        <xyz>-1 0 0</xyz>
         <limit>
           <lower>-0.349066</lower>
           <upper>0.349066</upper>
@@ -320,7 +323,8 @@
     </joint>
 
     <link name='tilt_arm_1'>
-      <pose>0.19 -0.19 0.016 0 0 0.785398</pose>
+      <!-- <pose>0.19 -0.19 0.016 0 0 0.785398</pose> -->
+      <pose>0 -0.27 0.016 0 0 0</pose>
       <inertial>
         <pose>0.0 0.0 0.0 0 0 0</pose>
         <mass>0.04031180930624021</mass>
@@ -337,7 +341,7 @@
         <geometry>
           <mesh>
             <scale>1e-3 1e-3 1e-3</scale>
-            <uri>model://TV_QUADX/meshes/dof1.stl</uri>
+            <uri>model://SAT_QUADP/meshes/dof1.stl</uri>
           </mesh>
         </geometry>
         <surface>
@@ -353,7 +357,7 @@
         <geometry>
           <mesh>
             <scale>1e-3 1e-3 1e-3</scale>
-            <uri>model://TV_QUADX/meshes/dof1.stl</uri>
+            <uri>model://SAT_QUADP/meshes/dof1.stl</uri>
           </mesh>
         </geometry>
         <material>
@@ -373,279 +377,7 @@
       <child>tilt_arm_1</child>
       <parent>base_link</parent>
       <axis>
-        <xyz>0.5 -0.5 0</xyz>
-        <limit>
-          <lower>-0.349066</lower>
-          <upper>0.349066</upper>
-        </limit>
-        <dynamics>
-          <friction>1.0</friction>
-          <spring_reference>0</spring_reference>
-          <spring_stiffness>0</spring_stiffness>
-        </dynamics>
-        <use_parent_model_frame>1</use_parent_model_frame>
-      </axis>
-    </joint>
-
-     <link name='tilt_arm_7'>
-      <pose>0.19 0.19 0.016 0 0 5.49779</pose>
-      <inertial>
-        <pose>0.0 0.0 0.0 0 0 0</pose>
-        <mass>0.04031180930624021</mass>
-        <inertia>
-          <ixx>0.001829</ixx>
-          <ixy>0</ixy>
-          <ixz>0</ixz>
-          <iyy>0.000448</iyy>
-          <iyz>0</iyz>
-          <izz>0.001461</izz>
-        </inertia>
-      </inertial>
-      <collision name='tilt_arm_7_collision'>
-        <geometry>
-          <mesh>
-            <scale>1e-3 1e-3 1e-3</scale>
-            <uri>model://TV_QUADX/meshes/dof2.stl</uri>
-          </mesh>
-        </geometry>
-        <surface>
-          <contact>
-            <ode/>
-          </contact>
-          <friction>
-            <ode/>
-          </friction>
-        </surface>
-      </collision>
-      <visual name='tilt_arm_7_visual'>
-        <geometry>
-          <mesh>
-            <scale>1e-3 1e-3 1e-3</scale>
-            <uri>model://TV_QUADX/meshes/dof2.stl</uri>
-          </mesh>
-        </geometry>
-        <material>
-          <script>
-            <name>Gazebo/Blue</name>
-            <uri>file://media/materials/scripts/gazebo.material</uri>
-          </script>
-        </material>
-      </visual>
-      <gravity>1</gravity>
-      <velocity_decay/>
-      <self_collide>0</self_collide>
-    </link>
-
-    <joint name='tilt_arm_7_joint' type='revolute'>
-      <pose> 0 0 0 0 0 0</pose>
-      <child>tilt_arm_7</child>
-      <parent>tilt_arm_3</parent>
-      <axis>
-        <xyz>-0.5 0.5 0</xyz>
-        <limit>
-          <lower>-0.349066</lower>
-          <upper>0.349066</upper>
-        </limit>
-        <dynamics>
-          <friction>1.0</friction>
-          <spring_reference>0</spring_reference>
-          <spring_stiffness>0</spring_stiffness>
-        </dynamics>
-        <use_parent_model_frame>1</use_parent_model_frame>
-      </axis>
-    </joint>
-
-    <link name='tilt_arm_6'>
-      <pose>-0.19 0.19 0.016 0 0 3.92699</pose>
-      <inertial>
-        <pose>0.0 0.0 0.0 0 0 0</pose>
-        <mass>0.04031180930624021</mass>
-        <inertia>
-          <ixx>0.001829</ixx>
-          <ixy>0</ixy>
-          <ixz>0</ixz>
-          <iyy>0.000448</iyy>
-          <iyz>0</iyz>
-          <izz>0.001461</izz>
-        </inertia>
-      </inertial>
-      <collision name='tilt_arm_6_collision'>
-        <geometry>
-          <mesh>
-            <scale>1e-3 1e-3 1e-3</scale>
-            <uri>model://TV_QUADX/meshes/dof2.stl</uri>
-          </mesh>
-        </geometry>
-        <surface>
-          <contact>
-            <ode/>
-          </contact>
-          <friction>
-            <ode/>
-          </friction>
-        </surface>
-      </collision>
-      <visual name='tilt_arm_6_visual'>
-        <geometry>
-          <mesh>
-            <scale>1e-3 1e-3 1e-3</scale>
-            <uri>model://TV_QUADX/meshes/dof2.stl</uri>
-          </mesh>
-        </geometry>
-        <material>
-          <script>
-	    <name>Gazebo/Grey</name>
-            <uri>file://media/materials/scripts/gazebo.material</uri>
-          </script>
-        </material>
-      </visual>
-      <gravity>1</gravity>
-      <velocity_decay/>
-      <self_collide>0</self_collide>
-    </link>
-
-    <joint name='tilt_arm_6_joint' type='revolute'>
-      <pose>0 0 0 0 0 0</pose>
-      <child>tilt_arm_6</child>
-      <parent>tilt_arm_2</parent>
-      <axis>
-        <xyz>-0.5 -0.5 0</xyz>
-        <limit>
-          <lower>-0.349066</lower>
-          <upper>0.349066</upper>
-        </limit>
-        <dynamics>
-          <friction>1.0</friction>
-          <spring_reference>0</spring_reference>
-          <spring_stiffness>0</spring_stiffness>
-        </dynamics>
-        <use_parent_model_frame>1</use_parent_model_frame>
-      </axis>
-    </joint>
-
-    <link name='tilt_arm_8'>
-      <pose>-0.19 -0.19 0.016 0 0 2.356190</pose>
-      <inertial>
-        <pose>0.0 0.0 0.0 0 0 0</pose>
-        <mass>0.04031180930624021</mass>
-        <inertia>
-          <ixx>0.001829</ixx>
-          <ixy>0</ixy>
-          <ixz>0</ixz>
-          <iyy>0.000448</iyy>
-          <iyz>0</iyz>
-          <izz>0.001461</izz>
-        </inertia>
-      </inertial>
-      <collision name='tilt_arm_8_collision'>
-        <geometry>
-          <mesh>
-            <scale>1e-3 1e-3 1e-3</scale>
-            <uri>model://TV_QUADX/meshes/dof2.stl</uri>
-          </mesh>
-        </geometry>
-        <surface>
-          <contact>
-            <ode/>
-          </contact>
-          <friction>
-            <ode/>
-          </friction>
-        </surface>
-      </collision>
-      <visual name='tilt_arm_8_visual'>
-        <geometry>
-          <mesh>
-            <scale>1e-3 1e-3 1e-3</scale>
-            <uri>model://TV_QUADX/meshes/dof2.stl</uri>
-          </mesh>
-        </geometry>
-        <material>
-          <script>
-            <name>Gazebo/Grey</name>
-            <uri>file://media/materials/scripts/gazebo.material</uri>
-          </script>
-        </material>
-      </visual>
-      <gravity>1</gravity>
-      <velocity_decay/>
-      <self_collide>0</self_collide>
-    </link>
-
-    <joint name='tilt_arm_8_joint' type='revolute'>
-      <pose>0 0 0 0 0 0</pose>
-      <child>tilt_arm_8</child>
-      <parent>tilt_arm_4</parent>
-      <axis>
-        <xyz>0.5 -0.5 0</xyz>
-        <limit>
-          <lower>-0.349066</lower>
-          <upper>0.3490662</upper>
-        </limit>
-        <dynamics>
-          <friction>1.0</friction>
-          <spring_reference>0</spring_reference>
-          <spring_stiffness>0</spring_stiffness>
-        </dynamics>
-        <use_parent_model_frame>1</use_parent_model_frame>
-      </axis>
-    </joint>
-
-    <link name='tilt_arm_5'>
-      <pose>0.19 -0.19 0.016 0 0 0.785398</pose>
-      <inertial>
-        <pose>0.0 0.0 0.0 0 0 0</pose>
-        <mass>0.04031180930624021</mass>
-        <inertia>
-          <ixx>0.001829</ixx>
-          <ixy>0</ixy>
-          <ixz>0</ixz>
-          <iyy>0.000448</iyy>
-          <iyz>0</iyz>
-          <izz>0.001461</izz>
-        </inertia>
-      </inertial>
-      <collision name='tilt_arm_5_collision'>
-        <geometry>
-          <mesh>
-            <scale>1e-3 1e-3 1e-3</scale>
-            <uri>model://TV_QUADX/meshes/dof2.stl</uri>
-          </mesh>
-        </geometry>
-        <surface>
-          <contact>
-            <ode/>
-          </contact>
-          <friction>
-            <ode/>
-          </friction>
-        </surface>
-      </collision>
-      <visual name='tilt_arm_5_visual'>
-        <geometry>
-          <mesh>
-            <scale>1e-3 1e-3 1e-3</scale>
-            <uri>model://TV_QUADX/meshes/dof2.stl</uri>
-          </mesh>
-        </geometry>
-        <material>
-          <script>
-	    <name>Gazebo/Blue</name>
-            <uri>file://media/materials/scripts/gazebo.material</uri>
-          </script>
-        </material>
-      </visual>
-      <gravity>1</gravity>
-      <velocity_decay/>
-      <self_collide>0</self_collide>
-    </link>
-
-    <joint name='tilt_arm_5_joint' type='revolute'>
-      <pose>0 0 0 0 0 0</pose>
-      <child>tilt_arm_5</child>
-      <parent>tilt_arm_1</parent>
-      <axis>
-        <xyz>0.5 0.5 0</xyz>
+        <xyz>0 -1 0</xyz>
         <limit>
           <lower>-0.349066</lower>
           <upper>0.349066</upper>
@@ -660,7 +392,8 @@
     </joint>
 
     <link name='rotor_1'>
-      <pose>0.19 -0.19 0.07 0 0 0</pose>
+      <!-- <pose>0.19 -0.19 0.07 0 0 0</pose> -->
+      <pose>0 -0.27 0.07 0 0 0</pose>
       <inertial>
         <pose>0 0 0 0 0 0</pose>
         <mass>0.005</mass>
@@ -710,7 +443,7 @@
     </link>
     <joint name='rotor_1_joint' type='revolute'>
       <child>rotor_1</child>
-      <parent>tilt_arm_5</parent>
+      <parent>tilt_arm_1</parent>
       <axis>
         <xyz>0 0 1</xyz>
         <limit>
@@ -727,7 +460,8 @@
     
 
     <link name='rotor_3'>
-      <pose>0.19 0.19 0.07 0 0 0</pose>
+      <!-- <pose>0.19 0.19 0.07 0 0 0</pose> -->
+      <pose>0.27 0 0.07 0 0 0</pose>
       <inertial>
         <pose>0 0 0 0 0 0</pose>
         <mass>0.005</mass>
@@ -777,7 +511,7 @@
     </link>
     <joint name='rotor_3_joint' type='revolute'>
       <child>rotor_3</child>
-      <parent>tilt_arm_7</parent>
+      <parent>tilt_arm_3</parent>
       <axis>
         <xyz>0 0 1</xyz>
         <limit>
@@ -794,7 +528,7 @@
     
 
     <link name='rotor_2'>
-      <pose>-0.19 0.19 0.07 0 0 0</pose>
+      <pose>0 0.27 0.07 0 0 0</pose>
       <inertial>
         <pose>0 0 0 0 0 0</pose>
         <mass>0.005</mass>
@@ -844,7 +578,7 @@
     </link>
     <joint name='rotor_2_joint' type='revolute'>
       <child>rotor_2</child>
-      <parent>tilt_arm_6</parent>
+      <parent>tilt_arm_2</parent>
       <axis>
         <xyz>0 0 1</xyz>
         <limit>
@@ -861,7 +595,7 @@
     
 
     <link name='rotor_4'>
-      <pose>-0.19 -0.19 0.07 0 0 0</pose>
+      <pose>-0.27 0 0.07 0 0 0</pose>
       <inertial>
         <pose>0 0 0 0 0 0</pose>
         <mass>0.005</mass>
@@ -911,7 +645,7 @@
     </link>
     <joint name='rotor_4_joint' type='revolute'>
       <child>rotor_4</child>
-      <parent>tilt_arm_8</parent>
+      <parent>tilt_arm_4</parent>
       <axis>
         <xyz>0 0 1</xyz>
         <limit>
@@ -1163,79 +897,6 @@
           <zero_position_armed>0</zero_position_armed>
           <joint_control_type>position</joint_control_type>
           <joint_name>tilt_arm_4_joint</joint_name>
-          <joint_control_pid>
-            <p>20</p>
-            <i>0.0</i>
-            <d>0.5</d>
-            <iMax>0</iMax>
-            <iMin>0</iMin>
-            <cmdMax>2</cmdMax>
-            <cmdMin>-2</cmdMin>
-          </joint_control_pid>
-        </channel>
-
-        <channel name="motor_tilt_arm_5">
-          <input_index>12</input_index>
-          <input_offset>0.0</input_offset>
-          <input_scaling>1.57</input_scaling>
-          <zero_position_disarmed>0</zero_position_disarmed>
-          <zero_position_armed>0</zero_position_armed>
-          <joint_control_type>position</joint_control_type>
-          <joint_name>tilt_arm_5_joint</joint_name>
-           <joint_control_pid>
-            <p>20</p>
-            <i>0.0</i>
-            <d>0.5</d>
-            <iMax>0.0</iMax>
-            <iMin>0.0</iMin>
-            <cmdMax>2</cmdMax>
-            <cmdMin>-2</cmdMin>
-          </joint_control_pid>
-        </channel>
-        <channel name='motor_tilt_arm_7'>
-          <input_index>13</input_index>
-          <input_offset>0.0</input_offset>
-          <input_scaling>1.57</input_scaling>
-          <zero_position_disarmed>0</zero_position_disarmed>
-          <zero_position_armed>0</zero_position_armed>
-          <joint_control_type>position</joint_control_type>
-          <joint_name>tilt_arm_7_joint</joint_name>
-          <joint_control_pid>
-            <p>20</p>
-            <i>0.0</i>
-            <d>0.5</d>
-            <iMax>0</iMax>
-            <iMin>0</iMin>
-            <cmdMax>2</cmdMax>
-            <cmdMin>-2</cmdMin>
-          </joint_control_pid>
-        </channel>
-	      <channel name='motor_tilt_arm_6'>
-          <input_index>14</input_index>
-          <input_offset>0.0</input_offset>
-          <input_scaling>1.57</input_scaling>
-          <zero_position_disarmed>0</zero_position_disarmed>
-          <zero_position_armed>0</zero_position_armed>
-          <joint_control_type>position</joint_control_type>
-          <joint_name>tilt_arm_6_joint</joint_name>
-          <joint_control_pid>
-            <p>20</p>
-            <i>0.0</i>
-            <d>0.5</d>
-            <iMax>0</iMax>
-            <iMin>0</iMin>
-            <cmdMax>2</cmdMax>
-            <cmdMin>-2</cmdMin>
-          </joint_control_pid>
-        </channel>
-	      <channel name='motor_tilt_arm_8'>
-          <input_index>15</input_index>
-          <input_offset>0.0</input_offset>
-          <input_scaling>1.57</input_scaling>
-          <zero_position_disarmed>0</zero_position_disarmed>
-          <zero_position_armed>0</zero_position_armed>
-          <joint_control_type>position</joint_control_type>
-          <joint_name>tilt_arm_8_joint</joint_name>
           <joint_control_pid>
             <p>20</p>
             <i>0.0</i>
