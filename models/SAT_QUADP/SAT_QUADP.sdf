@@ -1,18 +1,18 @@
 <?xml version="1.0" ?>
 
 <sdf version='1.6'>
-  <model name='SAT_QUADX'>
+  <model name='SAT_QUADP'>
     <link name='base_link'>
-      <pose>0 0 0 0 0 0</pose>
+      <pose>0 0 0 0 0 0.785398</pose>
       <inertial>
 	<!-- TO DO: Correct mass and inertias -->
-        <pose>0 0 0 0 0 0</pose>
+        <pose>0 0 0 0 0 0.785398</pose>
         <mass>1.75</mass>
         <inertia>
           <ixx>0.08612</ixx>
           <ixy>0.00</ixy>
           <ixz>0.00</ixz>
-          <iyy>0.08612</iyy>
+          <iyy>0.086120.1</iyy>
           <iyz>0.0</iyz>
           <izz>0.16088</izz>
         </inertia>
@@ -22,7 +22,7 @@
         <geometry>
           <mesh>
             <scale>1e-3 1e-3 1e-3</scale>
-            <uri>model://SAT_QUADX/meshes/body.stl</uri>
+            <uri>model://SAT_QUADP/meshes/body.stl</uri>
           </mesh>
         </geometry>
         <surface>
@@ -42,7 +42,7 @@
         <geometry>
           <mesh>
             <scale>1e-3 1e-3 1e-3</scale>
-            <uri>model://SAT_QUADX/meshes/body.stl</uri>
+            <uri>model://SAT_QUADP/meshes/body.stl</uri>
           </mesh>
         </geometry>
         <material>
@@ -116,24 +116,25 @@
     -->
 
     <link name='tilt_arm_3'>
-      <pose>0.19 0.19 0.016 0 0 5.49779</pose>
+      <!-- <pose>0.19 0.19 0.016 0 0 5.49779</pose> -->
+      <pose>0.27 0 0.016 0 0 4.71239</pose>
       <inertial>
         <pose>0.0 0.0 0.0 0 0 0</pose>
-        <mass>0.2</mass>
+        <mass>0.04031180930624021</mass>
         <inertia>
-          <ixx>0.000025417</ixx>
+          <ixx>0.001829</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>0.000052083</iyy>
+          <iyy>0.000448</iyy>
           <iyz>0</iyz>
-          <izz>0.000056667</izz>
+          <izz>0.001461</izz>
         </inertia>
       </inertial>
       <collision name='tilt_arm_3_collision'>
         <geometry>
           <mesh>
             <scale>1e-3 1e-3 1e-3</scale>
-            <uri>model://SAT_QUADX/meshes/dof1.stl</uri>
+            <uri>model://SAT_QUADP/meshes/dof1.stl</uri>
           </mesh>
         </geometry>
         <surface>
@@ -149,7 +150,7 @@
         <geometry>
           <mesh>
             <scale>1e-3 1e-3 1e-3</scale>
-            <uri>model://SAT_QUADX/meshes/dof1.stl</uri>
+            <uri>model://SAT_QUADP/meshes/dof1.stl</uri>
           </mesh>
         </geometry>
         <material>
@@ -165,12 +166,11 @@
     </link>
 
     <joint name='tilt_arm_3_joint' type='revolute'>
-      <!-- <pose> 0 -0.18 0 0 0 1.5708</pose> -->
-      <pose> 0 0 0 0 0 1.5708</pose>
+      <pose> 0 -0.18 0 0 0 1.5708</pose>
       <child>tilt_arm_3</child>
       <parent>base_link</parent>
       <axis>
-        <xyz>0.70710678118 0.70710678118 0</xyz>
+        <xyz>1 0 0</xyz>
         <limit>
           <lower>-0.349066</lower>
           <upper>0.349066</upper>
@@ -179,31 +179,31 @@
           <friction>1.0</friction>
           <spring_reference>0</spring_reference>
           <spring_stiffness>0</spring_stiffness>
-          <!-- <damping>0.05</damping> -->
         </dynamics>
         <use_parent_model_frame>1</use_parent_model_frame>
       </axis>
     </joint>
 
     <link name='tilt_arm_2'>
-      <pose>-0.19 0.19 0.016 0 0 3.92699</pose>
+      <!-- <pose>-0.19 0.19 0.016 0 0 3.92699</pose> -->
+      <pose>0 0.27 0.016 0 0 3.14159</pose>
       <inertial>
         <pose>0.0 0.0 0.0 0 0 0</pose>
-        <mass>0.2</mass>
+        <mass>0.04031180930624021</mass>
         <inertia>
-          <ixx>0.000025417</ixx>
+          <ixx>0.001829</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>0.000052083</iyy>
+          <iyy>0.000448</iyy>
           <iyz>0</iyz>
-          <izz>0.000056667</izz>
+          <izz>0.001461</izz>
         </inertia>
       </inertial>
       <collision name='tilt_arm_2_collision'>
         <geometry>
           <mesh>
             <scale>1e-3 1e-3 1e-3</scale>
-            <uri>model://SAT_QUADX/meshes/dof1.stl</uri>
+            <uri>model://SAT_QUADP/meshes/dof1.stl</uri>
           </mesh>
         </geometry>
         <surface>
@@ -219,7 +219,7 @@
         <geometry>
           <mesh>
             <scale>1e-3 1e-3 1e-3</scale>
-            <uri>model://SAT_QUADX/meshes/dof1.stl</uri>
+            <uri>model://SAT_QUADP/meshes/dof1.stl</uri>
           </mesh>
         </geometry>
         <material>
@@ -235,12 +235,11 @@
     </link>
 
     <joint name='tilt_arm_2_joint' type='revolute'>
-      <!-- <pose>0 0.18 0 0 0 -1.5708</pose> -->
-      <pose>0 0 0 0 0 -1.5708</pose>
+      <pose>0 0.18 0 0 0 -1.5708</pose>
       <child>tilt_arm_2</child>
       <parent>base_link</parent>
       <axis>
-        <xyz>-0.70710678118 0.70710678118 0</xyz>
+        <xyz>0 1 0</xyz>
         <limit>
           <lower>-0.349066</lower>
           <upper>0.349066</upper>
@@ -249,31 +248,31 @@
           <friction>1.0</friction>
           <spring_reference>0</spring_reference>
           <spring_stiffness>0</spring_stiffness>
-          <!-- <damping>0.05</damping> -->
         </dynamics>
         <use_parent_model_frame>1</use_parent_model_frame>
       </axis>
     </joint>
 
     <link name='tilt_arm_4'>
-      <pose>-0.19 -0.19 0.016 0 0 2.356190</pose>
+      <!-- <pose>-0.19 -0.19 0.016 0 0 2.356190</pose> -->
+      <pose>-0.27 0 0.016 0 0 1.5708</pose>
       <inertial>
         <pose>0.0 0.0 0.0 0 0 0</pose>
-        <mass>0.2</mass>
+        <mass>0.04031180930624021</mass>
         <inertia>
-          <ixx>0.000025417</ixx>
+          <ixx>0.001829</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>0.000052083</iyy>
+          <iyy>0.000448</iyy>
           <iyz>0</iyz>
-          <izz>0.000056667</izz>
+          <izz>0.001461</izz>
         </inertia>
       </inertial>
       <collision name='tilt_arm_4_collision'>
         <geometry>
           <mesh>
             <scale>1e-3 1e-3 1e-3</scale>
-            <uri>model://SAT_QUADX/meshes/dof1.stl</uri>
+            <uri>model://SAT_QUADP/meshes/dof1.stl</uri>
           </mesh>
         </geometry>
         <surface>
@@ -289,7 +288,7 @@
         <geometry>
           <mesh>
             <scale>1e-3 1e-3 1e-3</scale>
-            <uri>model://SAT_QUADX/meshes/dof1.stl</uri>
+            <uri>model://SAT_QUADP/meshes/dof1.stl</uri>
           </mesh>
         </geometry>
         <material>
@@ -305,12 +304,11 @@
     </link>
 
     <joint name='tilt_arm_4_joint' type='revolute'>
-      <!-- <pose>0 -0.18 0 0 0 1.5708</pose> -->
-      <pose>0 0 0 0 0 1.5708</pose>
+      <pose>0 -0.18 0 0 0 1.5708</pose>
       <child>tilt_arm_4</child>
       <parent>base_link</parent>
       <axis>
-        <xyz>-0.70710678118 -0.70710678118 0</xyz>
+        <xyz>-1 0 0</xyz>
         <limit>
           <lower>-0.349066</lower>
           <upper>0.349066</upper>
@@ -319,31 +317,31 @@
           <friction>1.0</friction>
           <spring_reference>0</spring_reference>
           <spring_stiffness>0</spring_stiffness>
-          <!-- <damping>0.05</damping> -->
         </dynamics>
         <use_parent_model_frame>1</use_parent_model_frame>
       </axis>
     </joint>
 
     <link name='tilt_arm_1'>
-      <pose>0.19 -0.19 0.016 0 0 0.785398</pose>
+      <!-- <pose>0.19 -0.19 0.016 0 0 0.785398</pose> -->
+      <pose>0 -0.27 0.016 0 0 0</pose>
       <inertial>
         <pose>0.0 0.0 0.0 0 0 0</pose>
-        <mass>0.2</mass>
+        <mass>0.04031180930624021</mass>
         <inertia>
-          <ixx>0.000025417</ixx>
+          <ixx>0.001829</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>0.000052083</iyy>
+          <iyy>0.000448</iyy>
           <iyz>0</iyz>
-          <izz>0.000056667</izz>
+          <izz>0.001461</izz>
         </inertia>
       </inertial>
       <collision name='tilt_arm_1_collision'>
         <geometry>
           <mesh>
             <scale>1e-3 1e-3 1e-3</scale>
-            <uri>model://SAT_QUADX/meshes/dof1.stl</uri>
+            <uri>model://SAT_QUADP/meshes/dof1.stl</uri>
           </mesh>
         </geometry>
         <surface>
@@ -359,7 +357,7 @@
         <geometry>
           <mesh>
             <scale>1e-3 1e-3 1e-3</scale>
-            <uri>model://SAT_QUADX/meshes/dof1.stl</uri>
+            <uri>model://SAT_QUADP/meshes/dof1.stl</uri>
           </mesh>
         </geometry>
         <material>
@@ -375,12 +373,11 @@
     </link>
 
     <joint name='tilt_arm_1_joint' type='revolute'>
-      <!-- <pose>0 0.18 0 0 0 -1.5708</pose> -->
-      <pose>0 0.0 0 0 0 -1.5708</pose>
+      <pose>0 0.18 0 0 0 -1.5708</pose>
       <child>tilt_arm_1</child>
       <parent>base_link</parent>
       <axis>
-        <xyz>0.70710678118 -0.70710678118 0</xyz>
+        <xyz>0 -1 0</xyz>
         <limit>
           <lower>-0.349066</lower>
           <upper>0.349066</upper>
@@ -389,14 +386,14 @@
           <friction>1.0</friction>
           <spring_reference>0</spring_reference>
           <spring_stiffness>0</spring_stiffness>
-          <!-- <damping>0.05</damping> -->
         </dynamics>
         <use_parent_model_frame>1</use_parent_model_frame>
       </axis>
     </joint>
 
     <link name='rotor_1'>
-      <pose>0.19 -0.19 0.07 0 0 0</pose>
+      <!-- <pose>0.19 -0.19 0.07 0 0 0</pose> -->
+      <pose>0 -0.27 0.07 0 0 0</pose>
       <inertial>
         <pose>0 0 0 0 0 0</pose>
         <mass>0.005</mass>
@@ -463,7 +460,8 @@
     
 
     <link name='rotor_3'>
-      <pose>0.19 0.19 0.07 0 0 0</pose>
+      <!-- <pose>0.19 0.19 0.07 0 0 0</pose> -->
+      <pose>0.27 0 0.07 0 0 0</pose>
       <inertial>
         <pose>0 0 0 0 0 0</pose>
         <mass>0.005</mass>
@@ -530,7 +528,7 @@
     
 
     <link name='rotor_2'>
-      <pose>-0.19 0.19 0.07 0 0 0</pose>
+      <pose>0 0.27 0.07 0 0 0</pose>
       <inertial>
         <pose>0 0 0 0 0 0</pose>
         <mass>0.005</mass>
@@ -597,7 +595,7 @@
     
 
     <link name='rotor_4'>
-      <pose>-0.19 -0.19 0.07 0 0 0</pose>
+      <pose>-0.27 0 0.07 0 0 0</pose>
       <inertial>
         <pose>0 0 0 0 0 0</pose>
         <mass>0.005</mass>
@@ -698,7 +696,7 @@
       <motorConstant>9.84e-06</motorConstant>
       <momentConstant>0.09</momentConstant>
       <commandSubTopic>/gazebo/command/motor_speed</commandSubTopic>
-      <motorNumber>2</motorNumber>
+      <motorNumber>1</motorNumber>
       <rotorDragCoefficient>0.000175</rotorDragCoefficient>
       <rollingMomentCoefficient>1e-06</rollingMomentCoefficient>
       <motorSpeedPubTopic>/motor_speed/1</motorSpeedPubTopic>
@@ -716,7 +714,7 @@
       <motorConstant>9.84e-06</motorConstant>
       <momentConstant>0.09</momentConstant>
       <commandSubTopic>/gazebo/command/motor_speed</commandSubTopic>
-      <motorNumber>1</motorNumber>
+      <motorNumber>2</motorNumber>
       <rotorDragCoefficient>0.000175</rotorDragCoefficient>
       <rollingMomentCoefficient>1e-06</rollingMomentCoefficient>
       <motorSpeedPubTopic>/motor_speed/2</motorSpeedPubTopic>
