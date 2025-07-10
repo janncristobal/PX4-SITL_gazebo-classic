@@ -20,8 +20,8 @@
      <plugin name='wind_plugin' filename='libgazebo_wind_plugin.so'>
       <frameId>base_link</frameId>
       <robotNamespace/>
-      <windVelocityMean>5.0</windVelocityMean>
-      <windVelocityMax>10.0</windVelocityMax>
+      <windVelocityMean>0.0</windVelocityMean>
+      <windVelocityMax>0.0</windVelocityMax>
       <windVelocityVariance>0</windVelocityVariance>
       <windDirectionMean>0 1 0</windDirectionMean>
       <windDirectionVariance>0</windDirectionVariance>
